@@ -8,12 +8,13 @@
           
        if(num % i == 0){
 
-        printf("%d\n",i);
+        printf("%d,",i);
 
 		}
 
 		i++;
 }
+printf("\n");
 
 return 0;
   }
