@@ -1,16 +1,24 @@
 #include<stdio.h>
   int main(){
        int num;
-	      printf("Enter the number :");
-		    scanf("%d",&num);
-			int i=2;
-  while(i<=num){
+	      int i=2;
+		     printf("Enter the number : ");
+			   scanf("%d",&num);
+			   int mul;
+      while(i<=num){            
+         
 
-     if(num%i==0 && i>1 && i%i==0|| i==2){
+       if(num/2== 0){
 
-	  printf("The factors of %d is %d\n",num,i);
+	   if(i%i==0 || mul==num)
 
-	  }
-	  i++;
+        printf("%d",i);
+
+		}
+
+		i++;
 }
- return 0;}
+printf("\n");
+
+return 0;
+  }
