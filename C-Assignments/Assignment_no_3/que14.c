@@ -7,10 +7,14 @@ int main(){
 	printf("Enter the number : ");
 	scanf("%d",&num);
 	  int i;
-	  int res;
-for(int i=1; i<100;i++){
-    if(num%i=1)
-if(res==0){
+	  int flag;
+for(int i=2; i<num/2;i++){
+    if(num%i!=0)
+    
+	   flag = 1;
+     break;
+}
+if(flag==1){
 
 		 printf("The number is   prime number ");
 }
