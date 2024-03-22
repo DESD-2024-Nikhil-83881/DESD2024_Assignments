@@ -1,29 +1,50 @@
 #include<stdio.h>
-int arr_search(int arr[],int length, int key );
- int main(void){
- int key,ret,length;
-   int arr[6] = {11,44,33,44,55,66};
-    
-	printf("Enter the key to be searched : ");
-    scanf("%d",&key);
+void array_sort(int arr[], int length);
+void accept_array(int arr[], int length);			
+void print_array(int arr[], int length);			
+int main()
+{
+	int arr[6];
 
-	ret = arr_search(arr ,6,key);
-
-if(ret!=-1)
-	printf("The key is found at index %d", ret);
-
-	else
-	   printf("The key is not found ");
+accept_array(arr, 6);	
+printf("after sort array :	");			
+array_sort(arr, 6);	
+print_array(arr, 6);	
 
 return 0;
- }
+}
 
- int arr_search(int arr[],int length,int key){
-    
-      for(int i=0; i<length; i++){
-             if(arr[i]==key)
-			   return i;
-	  }             
-       return -1;
- }
+void accept_array(int arr[], int length)		
+{
+	printf("Enter array elements: ");
+	for(int i = 0 ; i < length ; i++)
+	{
+		printf("arr[%d] : ", i);
+		scanf("%d", &arr[i]);
+	}
+}
+void array_sort(int arr[], int length)
+{ 
+int temp=0;
+	for(int i = 0; i < length-1; i++)
+	{
+		for(int j = i+1; j<length; j++)
+		{
 
+		if(arr[i] > arr[j]){
+			int temp = arr[i];
+			arr[i] = arr[j];
+			arr[j] = temp;
+}
+		}
+	}
+
+}
+
+void print_array(int arr[], int length)		
+{
+	printf("Array : ");
+	for(int  i = 0 ; i < length ; i++)
+		printf("%-4d", arr[i]);
+	printf("\n");
+}
